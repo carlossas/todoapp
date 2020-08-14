@@ -1,3 +1,20 @@
+Herramientas usadas para el desarrollo de TodoApp:
+
+Angular 10
+NGRX
+Manejo de estado REDUX
+Animaciones de AnimateCSS
+Boostrap material
+Typescript
+
+
+PD: El CRUD se completo en el todo, se agregaron filtros, pipes, atributos(Completado-Incompleto) y se 
+manejo estado de la aplicación con Redux.
+
+
+Autor: Ing. Carlos Adrian García Reyes - Desarrollador FrontEnd
+--------------------------------------------------------------------
+
 # Todoapp
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 9.0.2.
