@@ -1,6 +1,24 @@
-<ul class="todo-list">
+<div class="pt-3">
 
-    <app-todo-item *ngFor="let todo of todos | filtroTodo:filtroActual"
-                   [todo]="todo"></app-todo-item>
+    <div class="card w-100">
+        <div class="row card-header m-0">
 
-</ul>
+            <div class="col-10 col-sm-10 col-md-11 col-lg-11 align-self-center">
+                <h5 class="text-black font-weight-bold m-0">ToDo List by Iron Bit</h5>
+            </div>
+
+            <div class="col-2 col-sm-2 col-md-1 col-lg-1 align-self-center">
+                <img (click)="limpiarTodos()" class="borrarTodo pointer" src="./assets/img/recycle-bin.svg" alt="">
+            </div>
+
+        </div>
+        <div class="card-body">
+            <h5 *ngIf="todos.length == 0" class="text-center">No hay ToDo's tomate un café!</h5>
+
+
+            <app-todo-item *ngFor="let todo of todos | filtroTodo:filtroActual" [todo]="todo"></app-todo-item>
+
+        </div>
+    </div>
+
+</div>

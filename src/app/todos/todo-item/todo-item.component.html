@@ -1,24 +1,17 @@
-<!-- `editing`  `completed` -->
-    
-<li [class.completed]="todo.completado"
-    [class.editing]="editando">
+<div class="row m-0 py-3">
 
-    <div class="view">
-      
-      <input class="toggle"
-             [formControl]="chkCompletado"
-             type="checkbox">
-      
-      <label (dblclick)="editar()"> {{ todo.texto }} </label>
-
-      <button class="destroy"
-              (click)="borrar()"></button>
+    <div class="col-2 col-sm-2 col-md-1 align-self-center">
+        <input class="toggle" [formControl]="chkCompletado" type="checkbox">
     </div>
 
-    <input class="edit" 
-           type="text"
-           [formControl]="txtInput"
-           (blur)="terminarEdicion()"
-           #inputFisico>
+    <div class="col-8 col-sm-8 col-md-10 align-self-center" [class.completed]="todo.completado" [class.editing]="editando">
+        <p *ngIf="!editando" (dblclick)="editar(todo.id)" class="todo-text m-0 pointer">{{ todo.texto }}</p>
+        <small *ngIf="!editando" class="text-secondary">(Doble click para ediar la tarea)</small>
+        <input *ngIf="editando && idEditando == todo.id" class="form-control animated fadeIn" type="text" [formControl]="txtInput" (keyup.enter)="terminarEdicion()" (blur)="terminarEdicion()" #inputFisico>
+    </div>
 
-</li>
+    <div (click)="borrar()" class="col-2 col-sm-2 col-md-1 align-self-center">
+        <img class="eliminar" src="./assets/img/remove.svg" alt="">
+    </div>
+
+</div>

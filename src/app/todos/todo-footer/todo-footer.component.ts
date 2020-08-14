@@ -3,7 +3,7 @@ import { Store } from '@ngrx/store';
 
 import { AppState } from 'src/app/app.reducer';
 import * as actions from '../../filtro/filtro.actions';
-import { limpiarTodos } from '../todo.actions';
+import { limpiarPendientes } from '../todo.actions';
 
 @Component({
   selector: 'app-todo-footer',
@@ -40,7 +40,7 @@ export class TodoFooterComponent implements OnInit {
 
   limpiarCompletados() {
 
-    this.store.dispatch( limpiarTodos() )
+    this.store.dispatch( limpiarPendientes() )
 
   }
 

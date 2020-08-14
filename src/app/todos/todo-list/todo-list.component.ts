@@ -6,6 +6,9 @@ import { AppState } from '../../app.reducer';
 import { filtrosValidos } from '../../filtro/filtro.actions';
 
 
+import { limpiarTodos } from '../todo.actions';
+
+
 @Component({
   selector: 'app-todo-list',
   templateUrl: './todo-list.component.html',
@@ -31,4 +34,10 @@ export class TodoListComponent implements OnInit {
 
   }
 
+
+  limpiarTodos() {
+
+    this.store.dispatch( limpiarTodos({numeros: this.todos.length}) )
+
+  }
 }

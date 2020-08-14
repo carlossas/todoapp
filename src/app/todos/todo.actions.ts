@@ -1,7 +1,11 @@
 import { createAction, props } from '@ngrx/store';
 
 
-export const limpiarTodos = createAction('[TODO] Limpiar TODOS');
+export const limpiarPendientes= createAction('[TODO] Limpiar PENDIENTES');
+
+
+export const limpiarTodos = createAction('[TODO] Limpiar TODOS', props<{ numeros: number }>());
+
 
 export const crear = createAction(
     '[TODO] Crea Todo',
@@ -18,8 +22,9 @@ export const editar = createAction(
     props<{ id: number, texto: string }>()
 );
 
+
 export const borrar = createAction(
-    '[TODO] Borrar Todo',
+    '[TODO] Borrar',
     props<{ id: number }>()
 );
 

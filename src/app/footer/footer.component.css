@@ -1,0 +1,12 @@
+.info {
+    position: absolute;
+    bottom: 1.5rem;
+    width: 100%;
+}
+
+p {
+    margin: 0;
+    text-align: center;
+    font-size: 13px;
+    font-weight: 600;
+}

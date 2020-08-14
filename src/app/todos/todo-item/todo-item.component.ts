@@ -20,6 +20,8 @@ export class TodoItemComponent implements OnInit {
   chkCompletado: FormControl;
   txtInput: FormControl;
 
+  idEditando: number = 0;
+
   editando: boolean = false;
 
   constructor( private store: Store<AppState> ) { }
@@ -35,8 +37,8 @@ export class TodoItemComponent implements OnInit {
 
   }
 
-  editar() {
-
+  editar(id: number) {
+    this.idEditando = id;
     this.editando = true;
     this.txtInput.setValue( this.todo.texto );
 

@@ -1,38 +1,17 @@
-<section class="todoapp">
+<section class="container main">
 
     <app-todo-add></app-todo-add>
 
+    <div class="form-check">
+        <input class="form-check-input" (click)="toggleAll()" type="checkbox">
+        <span class="badge badge-light">Marcar todas las tareas como completadas</span>
+    </div>
 
 
-
-    <!-- This section should be hidden by default and shown when there are todos -->
-    <section class="main">
-
-      <input id="toggle-all"
-             class="toggle-all"
-             (click)="toggleAll()"
-             type="checkbox">
+    <app-todo-list></app-todo-list>
 
 
-
-      <label for="toggle-all">Mark all as complete</label>
-      
-      <app-todo-list></app-todo-list>
-
-      
-    </section>
 
     <app-todo-footer></app-todo-footer>
 
-  </section>
-
-
-
- 
-  
-  
-  
-  
-  
-  
-  
+</section>

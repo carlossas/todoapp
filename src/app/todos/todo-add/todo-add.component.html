@@ -1,8 +1,12 @@
-<header class="header">
-    <h1>todos</h1>
-    <input class="new-todo"
-           placeholder="¿Qué quieres hacer?"
-           [formControl]="txtInput"
-           (keyup.enter)="agregar()"
-           autofocus>
+<header class="pt-5">
+    <img class="d-block m-auto" src="./assets/img/ico-logo.png" alt="">
+    <h4 class="text-white text-center">Frontend Test</h4>
+    <div class="row">
+        <div class="col-10 col-sm-10 col-md-10 col-lg-11 pr-0">
+            <input class="form-control" placeholder="Ingrese una tarea" [formControl]="txtInput" (keyup.enter)="agregar()" autofocus>
+        </div>
+        <div (click)="agregar()" class="pointer col-2 col-sm-2 col-md-2 col-lg-1">
+            <img class="add-svg" src="./assets/img/add.svg">
+        </div>
+    </div>
 </header>

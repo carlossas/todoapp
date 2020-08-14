@@ -1,0 +1,44 @@
+.main {
+    width: 90%;
+    display: block;
+    margin: auto;
+}
+
+
+/* ////////////////////////////////////////////////////BREAKPOINTS//////////////////////////////////////////////////// */
+
+
+/* VISTA MOVIL VERTICAL*/
+
+@media screen and (min-width: 0px) and (max-width: 599px) {
+    .main {
+        width: 100%;
+    }
+}
+
+
+/* FIN VISTA MOVIL VERTICAL*/
+
+
+/* VISTA MOVIL HORIZONTAL*/
+
+@media screen and (min-width: 600px) and (max-width: 760px) {}
+
+
+/* FIN VISTA MOVIL HORIZONTAL*/
+
+
+/* VISTA IPAD/TABLET VERTICAL*/
+
+@media screen and (min-width: 761px) and (max-width: 999px) {}
+
+
+/* FIN VISTA IPAD/TABLET VERTICAL*/
+
+
+/* VISTA IPAD/TABLETS HORIZONTAL */
+
+@media screen and (min-width: 1000px) and (max-width: 1250px) {}
+
+
+/* FIN VISTA IPAD/TABLETS HORIZONTAL */
